@@ -16,7 +16,6 @@ services:
   server:
     # TODO: Make production image.
     restart: always
-    working_dir: /goldensplit-server
     command: make run
 
   db:

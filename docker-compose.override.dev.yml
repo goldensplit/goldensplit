@@ -9,7 +9,7 @@ services:
   server:
     build: <path_to_gs_server>
     volumes:
-      - <path_to_gs_server>:/goldensplit-server
+      - <path_to_gs_server>:/gs-server
     extra_hosts:
       "dev.goldensplit.ru": "127.0.0.1"
     command: make run-dev
