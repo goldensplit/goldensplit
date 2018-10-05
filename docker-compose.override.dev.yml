@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  nginx:
+    volumes:
+      - ./nginx/conf.d.dev:/etc/nginx/conf.d
+
+  server:
+    build: <path_to_gs_server>
+    volumes:
+      - <path_to_gs_server>:/goldensplit-server
+    extra_hosts:
+      "dev.goldensplit.ru": "127.0.0.1"
+    command: make run-dev
+
+  db:
+    ports:
+      - 5432:5432
