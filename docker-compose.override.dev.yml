@@ -3,11 +3,15 @@ version: "3"
 services:
 
   nginx:
+    restart: "no"
+    ports:
+      - 80:80
     volumes:
       - ./nginx/conf.d.dev:/etc/nginx/conf.d
 
   server:
     build: <path_to_gs_server>
+    restart: "no"
     volumes:
       - <path_to_gs_server>:/gs-server
     extra_hosts:
@@ -15,5 +19,6 @@ services:
     command: make run-dev
 
   db:
+    restart: "no"
     ports:
       - 5432:5432
