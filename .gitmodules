@@ -1,0 +1,3 @@
+[submodule "services/gs-api"]
+	path = services/gs-api
+	url = https://github.com/goldensplit/gs-api
