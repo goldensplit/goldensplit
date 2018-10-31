@@ -7,13 +7,13 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx/conf.d.dev:/etc/nginx/conf.d
+      - extern/nginx/conf.d.dev:/etc/nginx/conf.d
 
-  server:
-    build: <path_to_gs_server>
+  api:
+    build: services/gs-api
     restart: "no"
     volumes:
-      - <path_to_gs_server>:/gs-server
+      - services/gs-api:/gs-api
     extra_hosts:
       "dev.goldensplit.ru": "127.0.0.1"
     command: make run-dev
