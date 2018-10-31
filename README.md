@@ -1,9 +1,9 @@
-# GoldenSplit-Compose
+# GoldenSplit
 
 ## Install
 
 ```sh
-git clone --recursive https://github.com/goldensplit/gs-compose
+git clone --recursive https://github.com/goldensplit/goldensplit
 ```
 
 ## Dev
